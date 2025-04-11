@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,17 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Custom colors for our cybersecurity theme
+				cyber: {
+					background: '#0d1117',
+					foreground: '#e6edf3',
+					danger: '#e83a3a',
+					warning: '#ffb020',
+					success: '#4caf50',
+					info: '#0ea5e9',
+					muted: '#30363d',
+					accent: '#3796ef',
 				}
 			},
 			borderRadius: {
@@ -84,11 +96,34 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'pulse-glow': {
+					'0%, 100%': {
+						opacity: '1'
+					},
+					'50%': {
+						opacity: '0.7'
+					}
+				},
+				'slide-in': {
+					'0%': {
+						transform: 'translateX(-100%)',
+						opacity: '0'
+					},
+					'100%': {
+						transform: 'translateX(0)',
+						opacity: '1'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'pulse-glow': 'pulse-glow 2s infinite ease-in-out',
+				'slide-in': 'slide-in 0.3s ease-out'
+			},
+			backgroundImage: {
+				'cyber-grid': 'linear-gradient(rgba(23, 29, 40, 0.7) 1px, transparent 1px), linear-gradient(90deg, rgba(23, 29, 40, 0.7) 1px, transparent 1px)',
 			}
 		}
 	},
